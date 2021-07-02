@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="bot.css">
+
+  <meta charset="utf-8">
+  <title>
+    Robot Movement
+  </title>
+</head>
+<style>
+input:hover {
+  background-color: whitesmoke;
+}
+</style>
+
+<body>
+
+
+  <form action="connection.php" method="POST">
+   
+   <div class="slidecontainer">
+
+   
+ <p>
+    <input type="submit" id="forward" class= "button1" name="nxtmv" value="Forward" onclick="forward()">
+  <br></p>
+
+ <p>
+    <input type="submit" id="nxtmv" class= "button2" name="nxtmv" value="Left" onclick="left()">
+  <br></p>
+
+<p>
+  <input type="submit" id="nxtmv" class= "button3" name="nxtmv" value="Right" onclick="right()">
+  <br></p>
+
+
+<p>
+  <input type="submit" id="nxtmv" class= "button4" name="nxtmv" value="Back" onclick="back()">
+ <br></p>
+  
+<p>
+  <input type="submit" id="nxtmv" class= "button5" name="nxtmv" value="Stop" onclick="stop()">
+  <br></p>
+  
+
+
+</div>
+
+
+  
+ </form> 
+
+
+
+
+<script>
+function forward(){
+  alert("Moving Forward")
+}
+
+function left(){
+  alert("Turning Left")
+}
+
+function right(){
+  alert("Turning Right")
+}
+
+function back(){
+  alert("Going Back")
+}
+
+function stop(){
+  alert("Stopping")
+}
+
+
+
+</script>
+
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "fb11c123-4c82-480b-8277-b3f0b191098c", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "cd6e4173-e65d-4e51-bcf4-bf06bd5f28a5", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
